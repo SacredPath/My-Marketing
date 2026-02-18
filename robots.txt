@@ -2,7 +2,7 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://optionsharesinvestment.com/sitemap.xml
+Sitemap: https://palantirinvestment.com/sitemap.xml
 
 # Block unnecessary files
 Disallow: /massets/js/
