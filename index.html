@@ -364,7 +364,7 @@ AUTO INVESTMENTS - ROI UP TO 500%</h1>
               </p>
 <div class="alert alert-success border-0 mt-3 mb-3" style="background: linear-gradient(135deg, #28a745, #20c997);">
 <h5 class="mb-2">AUTO INVESTMENT SUCCESS STORIES!</h5>
-<p class="mb-0"><strong>Sarah M. turned $1,000 into $50,000 in 30 days!</strong> <strong>John D. earns $5,000 DAILY!</strong> <strong>Lisa K. achieved 500% ROI in 2 weeks!</strong> <strong>YOU'RE NEXT!</strong></p>
+<p class="mb-0" id="testimonial-text"><strong>Loading success story...</strong></p>
 </div>
 <div class="banner__btn-group btn-group">
 <a class="trk-btn trk-btn--primary trk-btn--arrow" href="https://dashboard.palantiroptions.online">START EARNING NOW
@@ -1260,6 +1260,37 @@ Your browser does not support the video tag.
             }
         });
     }
+})();
+</script>
+
+<script>
+// Auto-rotating testimonials
+(function() {
+    const testimonials = [
+        "<strong>Sarah M. turned $1,000 into $50,000 in 30 days!</strong>",
+        "<strong>John D. earns $5,000 DAILY!</strong>",
+        "<strong>Lisa K. achieved 500% ROI in 2 weeks!</strong>",
+        "<strong>Mike T. made $25,000 from $500 in just 3 weeks!</strong>",
+        "<strong>Emma R. generates $3,000 per week on autopilot!</strong>",
+        "<strong>David L. turned $2,000 into $100,000 in 60 days!</strong>",
+        "<strong>YOU'RE NEXT!</strong>"
+    ];
+    
+    let currentIndex = 0;
+    const testimonialElement = document.getElementById('testimonial-text');
+    
+    function rotateTestimonial() {
+        if (testimonialElement) {
+            testimonialElement.innerHTML = testimonials[currentIndex];
+            currentIndex = (currentIndex + 1) % testimonials.length;
+        }
+    }
+    
+    // Start rotation after 2 seconds, then change every 3 seconds
+    setTimeout(() => {
+        rotateTestimonial();
+        setInterval(rotateTestimonial, 3000);
+    }, 2000);
 })();
 </script>
 
