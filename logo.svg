@@ -1,62 +1,40 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1376 768" width="1376" height="768">
-  <defs>
-    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#1e3c72;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#00D4FF;stop-opacity:1" />
-    </linearGradient>
-    <linearGradient id="textGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#e0e0e0;stop-opacity:1" />
-    </linearGradient>
-  </defs>
-  
-  <!-- Background -->
-  <rect width="1376" height="768" fill="url(#bgGradient)" rx="20" ry="20"/>
-  
-  <!-- Doge Icon (simplified Shiba Inu silhouette) -->
-  <g transform="translate(100, 150)">
-    <!-- Body -->
-    <ellipse cx="200" cy="250" rx="120" ry="100" fill="#F7931E" opacity="0.9"/>
-    
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 120" width="400" height="120">
+  <!-- Simple Doge silhouette -->
+  <g transform="translate(20, 25)">
     <!-- Head -->
-    <circle cx="150" cy="180" r="70" fill="#FDB813"/>
+    <ellipse cx="30" cy="30" rx="18" ry="16" fill="#F7931E"/>
     
     <!-- Ears -->
-    <path d="M 100 140 L 90 100 L 120 120 Z" fill="#F7931E"/>
-    <path d="M 200 130 L 210 90 L 180 110 Z" fill="#F7931E"/>
+    <path d="M 18 20 L 15 10 L 22 16 Z" fill="#F7931E"/>
+    <path d="M 42 18 L 45 8 L 38 14 Z" fill="#F7931E"/>
     
     <!-- Eyes -->
-    <circle cx="130" cy="170" r="8" fill="#000"/>
-    <circle cx="170" cy="170" r="8" fill="#000"/>
+    <circle cx="24" cy="28" r="2" fill="#000"/>
+    <circle cx="36" cy="28" r="2" fill="#000"/>
     
     <!-- Nose -->
-    <ellipse cx="150" cy="190" rx="6" ry="4" fill="#000"/>
+    <ellipse cx="30" cy="34" rx="1.5" ry="1" fill="#000"/>
+    
+    <!-- Simple body -->
+    <ellipse cx="30" cy="50" rx="20" ry="15" fill="#F7931E"/>
     
     <!-- Tail -->
-    <path d="M 300 220 Q 380 180, 360 260 T 340 320" stroke="#F7931E" stroke-width="20" fill="none" stroke-linecap="round"/>
+    <path d="M 48 45 Q 58 40, 55 52" stroke="#F7931E" stroke-width="4" fill="none" stroke-linecap="round"/>
   </g>
   
-  <!-- Text: DOGE -->
-  <text x="550" y="320" font-family="Arial, sans-serif" font-size="120" font-weight="bold" fill="url(#textGradient)">
+  <!-- DOGE text -->
+  <text x="75" y="50" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="#1e3c72">
     DOGE
   </text>
   
-  <!-- Text: INITIATIVE -->
-  <text x="550" y="450" font-family="Arial, sans-serif" font-size="80" font-weight="300" fill="url(#textGradient)">
+  <!-- INITIATIVE text -->
+  <text x="75" y="75" font-family="Arial, sans-serif" font-size="16" font-weight="300" fill="#666">
     INITIATIVE
   </text>
   
-  <!-- Tagline -->
-  <text x="550" y="550" font-family="Arial, sans-serif" font-size="30" fill="#ffffff" opacity="0.8">
-    Trading • Investment • Innovation
-  </text>
-  
-  <!-- Decorative elements -->
-  <circle cx="1200" cy="150" r="30" fill="#00D4FF" opacity="0.3"/>
-  <circle cx="1250" cy="200" r="20" fill="#ffffff" opacity="0.2"/>
-  <circle cx="1150" cy="220" r="15" fill="#00D4FF" opacity="0.4"/>
-  
-  <circle cx="200" cy="600" r="25" fill="#00D4FF" opacity="0.3"/>
-  <circle cx="150" cy="650" r="18" fill="#ffffff" opacity="0.2"/>
-  <circle cx="250" cy="640" r="12" fill="#00D4FF" opacity="0.4"/>
+  <!-- Investment icon (simple chart arrow) -->
+  <g transform="translate(320, 35)">
+    <path d="M 5 25 L 5 5 L 25 5" stroke="#00D4FF" stroke-width="2" fill="none"/>
+    <path d="M 5 5 L 15 15 L 10 15 L 10 20 L 20 20 L 20 10 L 15 10 L 15 5 Z" fill="#00D4FF"/>
+  </g>
 </svg>
