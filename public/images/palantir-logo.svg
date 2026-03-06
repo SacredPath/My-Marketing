@@ -1,0 +1,54 @@
+<svg width="240" height="60" viewBox="0 0 240 60" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="palantirGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#00D4FF;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#0099CC;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#006699;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="textGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#006699;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0099CC;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Icon Container -->
+  <g transform="translate(5, 5)">
+    <!-- Outer hexagon shape for Palantir -->
+    <polygon points="25,5 45,15 45,35 25,45 5,35 5,15" fill="url(#palantirGradient)" opacity="0.9"/>
+    <polygon points="25,8 42,17 42,33 25,42 8,33 8,17" fill="url(#palantirGradient)"/>
+    
+    <!-- Inner network pattern -->
+    <g stroke="white" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <!-- Central node -->
+      <circle cx="25" cy="25" r="3" fill="white"/>
+      
+      <!-- Network connections -->
+      <line x1="25" y1="25" x2="15" y2="18" stroke="white" stroke-width="1"/>
+      <line x1="25" y1="25" x2="35" y2="18" stroke="white" stroke-width="1"/>
+      <line x1="25" y1="25" x2="35" y2="32" stroke="white" stroke-width="1"/>
+      <line x1="25" y1="25" x2="15" y2="32" stroke="white" stroke-width="1"/>
+      
+      <!-- Outer nodes -->
+      <circle cx="15" cy="18" r="2" fill="white"/>
+      <circle cx="35" cy="18" r="2" fill="white"/>
+      <circle cx="35" cy="32" r="2" fill="white"/>
+      <circle cx="15" cy="32" r="2" fill="white"/>
+      
+      <!-- Connecting lines between outer nodes -->
+      <line x1="15" y1="18" x2="35" y2="18" stroke="white" stroke-width="0.8" opacity="0.6"/>
+      <line x1="35" y1="18" x2="35" y2="32" stroke="white" stroke-width="0.8" opacity="0.6"/>
+      <line x1="35" y1="32" x2="15" y2="32" stroke="white" stroke-width="0.8" opacity="0.6"/>
+      <line x1="15" y1="32" x2="15" y2="18" stroke="white" stroke-width="0.8" opacity="0.6"/>
+    </g>
+    
+    <!-- Data flow indicators -->
+    <g stroke="white" stroke-width="1" fill="none" opacity="0.8">
+      <path d="M 18 22 Q 25 20 32 22" stroke-dasharray="2,1"/>
+      <path d="M 18 28 Q 25 30 32 28" stroke-dasharray="2,1"/>
+    </g>
+  </g>
+  
+  <!-- Text: Palantir -->
+  <text x="65" y="28" font-family="'Segoe UI', 'Arial', sans-serif" font-size="22" font-weight="700" fill="url(#textGradient)" letter-spacing="-0.5">Palantir</text>
+  <text x="65" y="45" font-family="'Segoe UI', 'Arial', sans-serif" font-size="11" fill="#666666" letter-spacing="0.5">INVESTMENT PLATFORM</text>
+</svg>
