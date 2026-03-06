@@ -2,7 +2,7 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://dashboard.palantiroptions.online/sitemap.xml
+Sitemap: https://doge-initiative.org/sitemap.xml
 
 # Block unnecessary files
 Disallow: /massets/js/
