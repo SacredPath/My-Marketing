@@ -1,4 +1,4 @@
-﻿// =================== preloader js  ================== //
+// =================== preloader js  ================== //
 document.addEventListener('DOMContentLoaded', function () {
     var preloader = document.querySelector('.preloader');
     if (!preloader) return; // Skip if preloader doesn't exist
