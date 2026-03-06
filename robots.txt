@@ -1,0 +1,21 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://dashboard.dogeoptions.online/sitemap.xml
+
+# Block unnecessary files
+Disallow: /massets/js/
+Disallow: /massets/css/
+Disallow: /admin/
+Disallow: /*.pdf$
+Disallow: /*.doc$
+Disallow: /*.docx$
+
+# Allow important directories
+Allow: /massets/images/
+Allow: /massets/css/style.css
+Allow: /massets/css/bootstrap.min.css
+
+# Crawl delay (optional)
+Crawl-delay: 1

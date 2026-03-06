@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Real Estate Investment | Doge Options</title>
+    <meta charset="utf-8"/>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <meta content="Invest in premium real estate properties worldwide with Doge Options. Tokenized ownership, REITs, and property development opportunities." name="description"/>
+    <link href="logo.jpeg" rel="shortcut icon" type="image/jpeg"/>
+    <link href="public/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="public/css/aos.css" rel="stylesheet"/>
+    <link href="public/css/all.min.css" rel="stylesheet"/>
+    <link href="public/css/swiper-bundle.min.css" rel="stylesheet"/>
+    <link href="public/css/style.css" rel="stylesheet"/>
+    <style>
+        .hero-section {
+            background: linear-gradient(135deg, rgba(30, 60, 114, 0.9), rgba(42, 82, 152, 0.9)), url('public/images/hero-section.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            color: white;
+            position: relative;
+        }
+        .hero-content h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        .hero-content p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+        }
+        .property-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+            transition: all 0.4s ease;
+            height: 100%;
+            position: relative;
+        }
+        .property-card:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 25px 50px rgba(0,0,0,0.2);
+        }
+        .property-image {
+            height: 250px;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 4rem;
+            position: relative;
+            overflow: hidden;
+        }
+        .property-image::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, rgba(102, 126, 234, 0.8), rgba(118, 75, 162, 0.8));
+            z-index: 1;
+        }
+        .property-image i {
+            position: relative;
+            z-index: 2;
+        }
+        .property-content {
+            padding: 30px;
+        }
+        .property-content h4 {
+            color: #2c3e50;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+        .stats-counter {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 60px 40px;
+            border-radius: 25px;
+            text-align: center;
+            margin-bottom: 40px;
+            box-shadow: 0 15px 40px rgba(102, 126, 234, 0.4);
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        .stats-counter::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+            animation: shimmer 4s infinite;
+        }
+        @keyframes shimmer {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
+        }
+        .stats-counter:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 25px 60px rgba(102, 126, 234, 0.5);
+        }
+        .stats-counter h3 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 15px;
+            font-family: 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+        .stats-counter .stats-label {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: rgba(255,255,255,0.9);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        .stats-counter .stats-description {
+            font-size: 0.95rem;
+            color: rgba(255,255,255,0.8);
+            margin-top: 10px;
+            line-height: 1.5;
+        }
+        .stats-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            opacity: 0.8;
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); opacity: 0.8; }
+            50% { transform: scale(1.1); opacity: 1; }
+        }
+        .benefits-section {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            padding: 100px 0;
+        }
+        .benefit-card {
+            background: white;
+            border-radius: 20px;
+            padding: 40px 30px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            margin-bottom: 30px;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+        .benefit-card:hover {
+            transform: translateY(-10px);
+            border-color: #667eea;
+            box-shadow: 0 20px 40px rgba(102, 126, 234, 0.2);
+        }
+        .benefit-icon {
+            font-size: 4rem;
+            color: #667eea;
+            margin-bottom: 25px;
+            display: inline-block;
+            padding: 20px;
+            background: linear-gradient(45deg, #667eea20, #764ba220);
+            border-radius: 50%;
+            transition: all 0.3s ease;
+        }
+        .benefit-card:hover .benefit-icon {
+            transform: scale(1.1);
+            background: linear-gradient(45deg, #667eea40, #764ba240);
+        }
+        .cta-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 100px 0;
+            color: white;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -50%;
+            width: 200%;
+            height: 100%;
+            background: linear-gradient(45deg, transparent, rgba(255,255,255,0.1), transparent);
+            animation: shimmer 3s infinite;
+        }
+        @keyframes shimmer {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
+        }
+        .feature-box {
+            background: white;
+            border-radius: 15px;
+            padding: 35px 30px;
+            margin-bottom: 25px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+            border-left: 5px solid #667eea;
+            transition: all 0.3s ease;
+        }
+        .feature-box:hover {
+            transform: translateX(10px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+        }
+        .feature-box h4 {
+            color: #2c3e50;
+            font-weight: 600;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+        .feature-box h4 i {
+            color: #667eea;
+            margin-right: 15px;
+            font-size: 1.2rem;
+        }
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        .section-header h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #2c3e50;
+            margin-bottom: 15px;
+        }
+        .section-header p {
+            font-size: 1.1rem;
+            color: #6c757d;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .logo-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 2rem;
+            font-weight: bold;
+            margin: 0 auto 20px;
+            box-shadow: 0 8px 20px rgba(102, 126, 234, 0.3);
+        }
+        .property-badge {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: linear-gradient(45deg, #ff6b6b, #ee5a24);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 25px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            z-index: 3;
+            box-shadow: 0 4px 12px rgba(238, 90, 36, 0.4);
+        }
+    </style>
+</head>
+<body>
+    <!-- ===============>> Header section start here <<================= -->
+    <header class="header-section header-section--style2">
+        <div class="header-top">
+            <div class="container">
+                <div class="header-top-area">
+                    <div class="header-top-social">
+                        <ul class="social">
+                            <li class="social__item">
+                                <a class="social__link social__link--style22" href="#"><i class="fab fa-facebook-f"></i></a>
+                            </li>
+                            <li class="social__item">
+                                <a class="social__link social__link--style22" href="#"><i class="fab fa-instagram"></i></a>
+                            </li>
+                            <li class="social__item">
+                                <a class="social__link social__link--style22" href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                            </li>
+                            <li class="social__item">
+                                <a class="social__link social__link--style22" href="#"><i class="fab fa-youtube"></i></a>
+                            </li>
+                            <li class="social__item">
+                                <a class="social__link social__link--style22" href="#"><i class="fab fa-twitter"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="header-top-info">
+                        <ul>
+                            <li><i class="fas fa-phone"></i> +1 (555) 123-4567</li>
+                            <li><i class="fas fa-envelope"></i> support@Doge Options.com</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header-bottom">
+            <div class="container">
+                <div class="header-wrapper">
+                    <div class="logo">
+                        <a href="index.html">
+                            <img alt="logo" src="logo.jpeg"/>
+                        </a>
+                    </div>
+                    <div class="header-content d-flex align-items-center gap-4">
+                        <div class="menu-area">
+                            <ul class="menu menu--style2">
+                                <li class="megamenu">
+                                    <a href="index.html">Home </a>
+                                </li>
+                                <li>
+                                    <a href="#">Company</a>
+                                    <ul class="submenu">
+                                        <li><a href="trade-strat-iq-about-us.html">Why Doge Options</a></li>
+                                        <li><a href="trade-strat-iq-legal-document.html">Legal Document</a></li>
+                                        <li><a href="careers.html">Careers</a></li>
+                                        <li><a href="affiliate.html">Affiliate</a></li>
+                                        <li><a href="insurance.html">Insurance</a></li>
+                                        <li><a href="https://shipping.Doge Optionsinvestment.com">Shipping</a></li>
+                                        <li><a href="trading-servers.html">Trading Servers</a></li>
+                                        <li><a href="mt4-advanced-trading-tools.html">MetaTrader 4 Advanced Trading Tools</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="trade-strat-iq-copy-trading.html">Copy Trading</a>
+                                </li>
+                                <li>
+                                    <a href="#">Product</a>
+                                    <ul class="submenu">
+                                        <li><a href="forex.html">Forex CFDs</a></li>
+                                        <li><a href="commodities.html">Commodities CFDs</a></li>
+                                        <li><a href="indices.html">Indices CFDs</a></li>
+                                        <li><a href="bonds.html">Bonds CFDs</a></li>
+                                        <li><a href="stocks.html">Stocks CFDs</a></li>
+                                        <li><a href="futures.html">Futures CFDs</a></li>
+                                        <li><a href="tesla.html">Tesla</a></li>
+                                        <li><a href="real-estate.html" class="active">Real Estate</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#">Account</a>
+                                    <ul class="submenu">
+                                        <li><a href="https://dashboard.dogeoptions.online">Register</a></li>
+                                        <li><a href="https://dashboard.dogeoptions.online">Login</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="contact-us.html">Contact Us</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="header-action">
+                            <div class="menu-area">
+                                <div class="header-btn">
+                                    <a class="trk-btn trk-btn--border trk-btn--primary" href="https://dashboard.dogeoptions.online">
+                                        <span>Trade Now</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- ===============>> Header section end here <<================= -->
+    
+    <!-- Gap between navbar and hero section -->
+    <div style="height: 120px;"></div>
+    
+    <!-- ===============>> Hero Section <<================= -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <div class="hero-content" data-aos="fade-right" data-aos-duration="1000">
+                        <h1>Real Estate Investment</h1>
+                        <p>Invest in premium properties worldwide through tokenized ownership, REITs, and direct property investments. Build wealth with tangible real estate assets.</p>
+                        <div class="hero-buttons">
+                            <a href="https://dashboard.dogeoptions.online" class="trk-btn trk-btn--large trk-btn--primary me-3">Start Investing</a>
+                            <a href="#properties" class="trk-btn trk-btn--large trk-btn--border">View Properties</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="hero-image" data-aos="fade-left" data-aos-duration="1000">
+                        <img src="public/images/real-estate-hero.png" alt="Real Estate Investment" class="img-fluid rounded-3">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===============>> Stats Section <<================= -->
+    <section class="stats-section padding-top padding-bottom">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="stats-counter" data-aos="fade-up">
+                        <div class="stats-icon">
+                            <i class="fas fa-building"></i>
+                        </div>
+                        <h3 class="counter" data-target="850">850</h3>
+                        <div class="stats-label">Properties</div>
+                        <div class="stats-description">Premium real estate assets available for investment</div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="stats-counter" data-aos="fade-up" data-aos-delay="100">
+                        <div class="stats-icon">
+                            <i class="fas fa-globe"></i>
+                        </div>
+                        <h3 class="counter" data-target="35">35</h3>
+                        <div class="stats-label">Countries</div>
+                        <div class="stats-description">Global presence across major markets worldwide</div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="stats-counter" data-aos="fade-up" data-aos-delay="200">
+                        <div class="stats-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h3 class="counter" data-target="15">15</h3>
+                        <div class="stats-label">Avg Returns</div>
+                        <div class="stats-description">Annual average returns on investments</div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="stats-counter" data-aos="fade-up" data-aos-delay="300">
+                        <div class="stats-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3 class="counter" data-target="100">100</h3>
+                        <div class="stats-label">Verified</div>
+                        <div class="stats-description">Properties verified and authenticated</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===============>> Investment Types <<================= -->
+    <section class="investment-types padding-top padding-bottom" id="properties">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2>Real Estate Investment Options</h2>
+                <p>Choose from diverse real estate investment opportunities with beautiful cards</p>
+            </div>
+            
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="property-card" data-aos="fade-up">
+                        <div class="property-image">
+                            <i class="fas fa-building"></i>
+                        </div>
+                        <div class="property-badge">Premium</div>
+                        <div class="property-content">
+                            <div class="logo-icon">CP</div>
+                            <h4>Commercial Properties</h4>
+                            <p>Invest in office buildings, retail spaces, and industrial properties with stable rental income and long-term appreciation potential.</p>
+                            <ul class="list-unstyled">
+                                <li><i class="fas fa-check text-success me-2"></i>Office buildings</li>
+                                <li><i class="fas fa-check text-success me-2"></i>Retail centers</li>
+                                <li><i class="fas fa-check text-success me-2"></i>Warehouses</li>
+                            </ul>
+                            <a href="https://dashboard.dogeoptions.online" class="btn btn-primary mt-3">Invest Now</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="property-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="property-image">
+                            <i class="fas fa-home"></i>
+                        </div>
+                        <div class="property-badge">Popular</div>
+                        <div class="property-content">
+                            <div class="logo-icon">RH</div>
+                            <h4>Residential Real Estate</h4>
+                            <p>Access premium residential properties including apartments, luxury homes, and multi-family housing units in prime locations.</p>
+                            <ul class="list-unstyled">
+                                <li><i class="fas fa-check text-success me-2"></i>Luxury apartments</li>
+                                <li><i class="fas fa-check text-success me-2"></i>Family homes</li>
+                                <li><i class="fas fa-check text-success me-2"></i>Student housing</li>
+                            </ul>
+                            <a href="https://dashboard.dogeoptions.online" class="btn btn-primary mt-3">Explore Properties</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="property-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="property-image">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <div class="property-badge">High Yield</div>
+                        <div class="property-content">
+                            <div class="logo-icon">RE</div>
+                            <h4>REITs</h4>
+                            <p>Trade Real Estate Investment Trusts offering diversified portfolios of properties with professional management and regular dividends.</p>
+                            <ul class="list-unstyled">
+                                <li><i class="fas fa-check text-success me-2"></i>Equity REITs</li>
+                                <li><i class="fas fa-check text-success me-2"></i>Mortgage REITs</li>
+                                <li><i class="fas fa-check text-success me-2"></i>Hybrid REITs</li>
+                            </ul>
+                            <a href="https://dashboard.dogeoptions.online" class="btn btn-primary mt-3">Trade REITs</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="property-card" data-aos="fade-up" data-aos-delay="300">
+                        <div class="property-image">
+                            <i class="fas fa-hard-hat"></i>
+                        </div>
+                        <div class="property-badge">Growth</div>
+                        <div class="property-content">
+                            <div class="logo-icon">PD</div>
+                            <h4>Property Development</h4>
+                            <p>Invest in development projects from ground-up construction to renovation opportunities with high growth potential.</p>
+                            <ul class="list-unstyled">
+                                <li><i class="fas fa-check text-success me-2"></i>New construction</li>
+                                <li><i class="fas fa-check text-success me-2"></i>Renovation projects</li>
+                                <li><i class="fas fa-check text-success me-2"></i>Land development</li>
+                            </ul>
+                            <a href="https://dashboard.dogeoptions.online" class="btn btn-primary mt-3">Development Deals</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="property-card" data-aos="fade-up" data-aos-delay="400">
+                        <div class="property-image">
+                            <i class="fas fa-hotel"></i>
+                        </div>
+                        <div class="property-badge">Tourism</div>
+                        <div class="property-content">
+                            <div class="logo-icon">HP</div>
+                            <h4>Hospitality Properties</h4>
+                            <p>Invest in hotels, resorts, and vacation rental properties benefiting from tourism and travel industry growth.</p>
+                            <ul class="list-unstyled">
+                                <li><i class="fas fa-check text-success me-2"></i>Hotels & resorts</li>
+                                <li><i class="fas fa-check text-success me-2"></i>Vacation rentals</li>
+                                <li><i class="fas fa-check text-success me-2"></i>Hostels & B&Bs</li>
+                            </ul>
+                            <a href="https://dashboard.dogeoptions.online" class="btn btn-primary mt-3">Hospitality Deals</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="property-card" data-aos="fade-up" data-aos-delay="500">
+                        <div class="property-image">
+                            <i class="fas fa-warehouse"></i>
+                        </div>
+                        <div class="property-badge">Industrial</div>
+                        <div class="property-content">
+                            <div class="logo-icon">IL</div>
+                            <h4>Industrial Properties</h4>
+                            <p>Invest in logistics centers, distribution facilities, and industrial parks supporting e-commerce and supply chain growth.</p>
+                            <ul class="list-unstyled">
+                                <li><i class="fas fa-check text-success me-2"></i>Logistics centers</li>
+                                <li><i class="fas fa-check text-success me-2"></i>Distribution hubs</li>
+                                <li><i class="fas fa-check text-success me-2"></i>Storage facilities</li>
+                            </ul>
+                            <a href="https://dashboard.dogeoptions.online" class="btn btn-primary mt-3">Industrial Properties</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===============>> Features Section <<================= -->
+    <section class="features-section padding-top padding-bottom">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2>Why Choose Our Real Estate Platform?</h2>
+                <p>Discover the features that make our real estate investments secure and profitable</p>
+            </div>
+            
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="feature-box" data-aos="fade-right">
+                        <h4><i class="fas fa-lock me-2"></i>Secure Ownership</h4>
+                        <p>All property investments are legally secured with proper title deeds and blockchain-based tokenization for transparent ownership records.</p>
+                    </div>
+                    <div class="feature-box" data-aos="fade-right" data-aos-delay="100">
+                        <h4><i class="fas fa-dollar-sign me-2"></i>Passive Income</h4>
+                        <p>Generate regular rental income from properties without the hassle of direct management through professional property management services.</p>
+                    </div>
+                    <div class="feature-box" data-aos="fade-right" data-aos-delay="200">
+                        <h4><i class="fas fa-chart-pie me-2"></i>Fractional Investment</h4>
+                        <p>Start investing in high-value properties with as little as $100 through fractional ownership and tokenized real estate assets.</p>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="feature-box" data-aos="fade-left">
+                        <h4><i class="fas fa-globe me-2"></i>Global Access</h4>
+                        <p>Invest in properties worldwide with access to prime real estate markets in major cities across different continents.</p>
+                    </div>
+                    <div class="feature-box" data-aos="fade-left" data-aos-delay="100">
+                        <h4><i class="fas fa-shield-alt me-2"></i>Due Diligence</h4>
+                        <p>Every property undergoes rigorous due diligence including title verification, property inspection, and market analysis.</p>
+                    </div>
+                    <div class="feature-box" data-aos="fade-left" data-aos-delay="200">
+                        <h4><i class="fas fa-exchange-alt me-2"></i>Liquid Markets</h4>
+                        <p>Trade your real estate investments on our secondary market with competitive liquidity and transparent pricing.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===============>> Benefits Section <<================= -->
+    <section class="benefits-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2>Why Invest in Real Estate?</h2>
+                <p>Discover the advantages of real estate investments with our beautiful benefit cards</p>
+            </div>
+            
+            <div class="row">
+                <div class="col-lg-3 col-md-6">
+                    <div class="benefit-card" data-aos="fade-up">
+                        <div class="benefit-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h5>Stable Growth</h5>
+                        <p>Real estate historically provides stable long-term appreciation and acts as a hedge against inflation.</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6">
+                    <div class="benefit-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="benefit-icon">
+                            <i class="fas fa-coins"></i>
+                        </div>
+                        <h5>Regular Income</h5>
+                        <p>Generate consistent cash flow through rental payments and property appreciation over time.</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6">
+                    <div class="benefit-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="benefit-icon">
+                            <i class="fas fa-piggy-bank"></i>
+                        </div>
+                        <h5>Tangible Asset</h5>
+                        <p>Own physical properties with intrinsic value that exists independently of market speculation.</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6">
+                    <div class="benefit-card" data-aos="fade-up" data-aos-delay="300">
+                        <div class="benefit-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h5>Tax Benefits</h5>
+                        <p>Take advantage of tax deductions, depreciation benefits, and 1031 exchanges for tax deferral.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===============>> CTA Section <<================= -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center">
+                    <h2 class="mb-4" data-aos="fade-up">Start Your Real Estate Investment Journey</h2>
+                    <p class="mb-4" data-aos="fade-up" data-aos-delay="100">Join thousands of investors building wealth through premium real estate properties. Experience the security and growth potential of real estate investing.</p>
+                    <div data-aos="fade-up" data-aos-delay="200">
+                        <a href="" class="trk-btn trk-btn--large trk-btn--border trk-btn--primary me-3">Open Account</a>
+                        <a href="contact-us.html" class="trk-btn trk-btn--large trk-btn--border">Contact Advisor</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Scripts -->
+    <script src="public/js/bootstrap.bundle.min.js"></script>
+    <script src="public/js/aos.js"></script>
+    <script src="public/js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/waypoints@4.0.1/lib/jquery.waypoints.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery.counterup@2.1.0/jquery.counterup.min.js"></script>
+    
+    <script>
+        // Initialize AOS
+        AOS.init();
+        
+        // Counter Animation
+        $('.counter').counterUp({
+            delay: 10,
+            time: 1000
+        });
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
