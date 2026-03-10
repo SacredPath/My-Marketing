@@ -97,7 +97,7 @@ function changeImage(themeMode = 'light') {
             images[i].src = newSrc;
         }
     } else {
-        icon.src = '/assets/images/moon.svg';
+        icon.src = 'public/images/moon.svg';
         var images = document.querySelectorAll('img.dark');
 
         for (var i = 0; i < images.length; i++) {
